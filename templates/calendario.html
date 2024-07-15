@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario</title>
+    <link rel="stylesheet" href="/static/css/calendario.css">
+</head>
+<body>
+    <header></header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary w-100">
+  
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/templates/index.html">
+          <img src="/static/img/logo.jfif" alt="Logo" width="35" height="29" class="d-inline-block align-text-top">
+          Atlético Gourmet
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/templates/calendario.html">Calendario</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Staff
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/templates/staff.html">Ver equipo</a></li>
+                <li><a class="dropdown-item" href="/templates/modificar_equipo.html">Modificar equipo</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="/templates/sumar_integrante.html">Sumar Integrante</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Inventario
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/templates/inventario.html">Ver ingredientes</a></li>
+                <li><a class="dropdown-item" href="/templates/modificar_lista.html">Modificar lista mensual</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="/templates/sumar_ingrediente.html">Sumar Integrediente</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Cuentas 
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/templates/modificar_gastos.html">Modificar gastos</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="/templates/">Sumar gastos </a></li>
+              </ul>
+            </li>
+  
+          </ul>
+        </div>
+      </div>
+    </nav>
+  
+  </header>
+  <div class="calendar-container">
+    <div class="calendar">
+        <div class="month">
+            <button class="prev" onclick="prevMonth()">&#10094;</button>
+            <h2 id="month-year">Julio 2024</h2>
+            <button class="next" onclick="nextMonth()">&#10095;</button>
+        </div>
+        <div class="weekdays">
+            <div>Dom</div>
+            <div>Lun</div>
+            <div>Mar</div>
+            <div>Mié</div>
+            <div>Jue</div>
+            <div>Vie</div>
+            <div>Sáb</div>
+        </div>
+        <div class="days" id="days"></div>
+    </div>
+</div>
+
+<div class="event-form-container">
+    <h3>Agregar Evento</h3>
+    <form id="event-form">
+        <label for="event-date">Fecha:</label>
+        <input type="date" id="event-date" required>
+        <label for="event-description">Descripción:</label>
+        <input type="text" id="event-description" required>
+        <button type="submit">Agregar Evento</button>
+    </form>
+    <button id="refresh-button" onclick="generateCalendar()">Recargar Calendario</button>
+</div>
+
+
+  <link rel="stylesheet" href="/bootstrap/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+  <script src="/bootstrap/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/static/js/script_calendario.js"></script>
+
+</body>
+</html>

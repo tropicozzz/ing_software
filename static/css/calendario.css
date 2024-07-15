@@ -1,0 +1,193 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #fff;
+    padding: 15px;
+    border-bottom: 2px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    color: #000000;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    margin-right: 10px;
+}
+
+.navbar-toggler {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.navbar-collapse {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-nav .nav-item {
+    margin: 0 10px;
+}
+
+.navbar-nav .nav-link {
+    color: #000000;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #007bff;
+}
+
+.dropdown-menu {
+    background-color: #e0e0e0;
+    border: none;
+    position: absolute;
+    display: none;
+}
+
+.dropdown-menu .dropdown-item {
+    color: #000000;
+    transition: background-color 0.3s, color 0.3s;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #f3f3f3;
+    color: #007bff;
+}
+
+.dropdown-divider {
+    border-top: 1px solid #ccc;
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.calendar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 75px); /* Altura de la ventana menos la altura del navbar */
+    padding-top: 20px;
+}
+
+.calendar {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 400px;
+    padding: 10px;
+}
+
+.month {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.month h2 {
+    margin: 0;
+}
+
+.prev, .next {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+}
+
+.weekdays, .days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.weekdays div, .days div {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.weekdays {
+    background-color: #f2f2f2;
+}
+
+.days div {
+    min-height: 40px;
+}
+
+.days .day {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    position: relative;
+}
+
+.days .day .event {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-size: 0.75rem;
+}
+
+.days .today {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+}
+
+.event-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.event-form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.event-form-container button {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-top: 10px;
+}
